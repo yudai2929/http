@@ -7,15 +7,6 @@ import (
 )
 
 func main() {
-
-	if false {
-		http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-			w.Write([]byte("Hello, World!"))
-		})
-
-		http.ListenAndServe(":8081", nil)
-	}
-
 	err := libhttp.ListenAndServe(8080)
 
 	if err != nil {
